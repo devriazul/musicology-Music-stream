@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Oswald:wght@300;400;500;600;700&display=swap");
+:root {
+  --font1: "Oswald", sans-serif;
+  --font2: "Montserrat", sans-serif;
+  --font3: "Nunito", sans-serif;
+  --bg1: #303030;
+  --bg2: #e8631c;
+  --text-color: #ffffff;
+}
+
+/* Reset Code */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-track {
+  background-color: var(--bg1);
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: var(--bg2);
+}
+body {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.pt-60 {
+  padding-top: 60px;
+}
+.pb-60 {
+  padding-bottom: 60px;
+}
+
+.fix::before,
+.fix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.heading {
+  font-size: 50px;
+  font-family: var(--font1);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+.sub-heading {
+  text-align: center;
+  font-size: 20px;
+  font-family: var(--font2);
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 35px;
+}
+.btn {
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  font-family: var(--font1);
+  font-weight: 400;
+  padding: 8px 35px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: var(--bg2);
+}
+.btn:hover {
+  letter-spacing: 4px;
+}
+/* Header Area CSS */
+.header-area {
+  background: var(--bg1);
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.header-area.sticky {
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__menu--list {
+  display: flex;
+}
+
+.header__menu--item {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.header__menu--link {
+  color: var(--text-color);
+  font-size: 18px;
+  text-transform: uppercase;
+
+  padding: 8px 16px;
+  display: block;
+}
+.header__menu--item:hover .header__menu--link,
+.header__menu--item.current .header__menu--link {
+  background-color: var(--bg2);
+}
+.header__search {
+  padding: 10px 0;
+}
+.header__search i {
+  font-size: 25px;
+  margin-left: 10px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.header__search i:hover {
+  color: var(--bg2);
+}
+#menu-btn {
+  border: 1px solid #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  display: none;
+}
+/* Banner Area CSS */
+.banner-area {
+  margin-top: 90px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner {
+  height: 100vh;
+  width: 45%;
+  position: relative;
+}
+.banner__content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.banner__text--h2 {
+  color: var(--text-color);
+  font-size: 50px;
+  font-family: var(--font1);
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.banner__text--p {
+  font-size: 20px;
+  color: var(--text-color);
+  font-family: var(--font2);
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+/* Dance Area CSS */
+.dance-area {
+  background: var(--bg2);
+}
+
+.dance__item {
+  text-align: center;
+  float: left;
+  width: 426px;
+  margin-right: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dance__item:last-child,
+.price__item:last-child {
+  margin-right: 0;
+}
+.dance__img {
+  width: 100%;
+}
+.dance__content {
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+  background: var(--bg1);
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  transition: 0.3s;
+}
+.dance__item:hover .dance__content {
+  bottom: 0;
+}
+.dance__content--h3,
+.price__content--h3,
+.promo__text--h3,
+.statistic__box--h3 {
+  color: var(--text-color);
+  font-size: 35px;
+  font-family: var(--font1);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.dance__content--p,
+.price__content--p,
+.promo__text--p,
+.statistic__box--p {
+  font-size: 20px;
+  font-family: var(--font2);
+  color: var(--text-color);
+}
+
+/* Price Area CSS */
+.price-area {
+  background: var(--bg1);
+}
+
+.price__item {
+  text-align: center;
+  float: left;
+  width: 426px;
+  margin-right: 20px;
+  border-radius: 3px;
+  background: var(--bg2);
+}
+.price__img {
+  margin-top: 25px;
+}
+.price__content {
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+}
+.price__btn--black {
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  background: var(--bg1);
+  padding: 10px 98px;
+  margin-top: 22px;
+  border-radius: 3px;
+}
+
+/* Promo Area CSS */
+.promo-area {
+  background-color: var(--bg1);
+}
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--bg2);
+}
+.promo__box {
+  width: 50%;
+}
+
+.promo__img {
+  width: 100%;
+}
+
+.promo__text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 154px;
+}
+
+.promo__btn--black {
+  margin-top: 30px;
+  background-color: var(--bg1);
+}
+
+/* Statistic Area CSS */
+.statistic-area {
+  background-color: var(--bg1);
+}
+.statistic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.statistic__box {
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* About Area CSS */
+.about-area {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--bg2);
+  position: relative;
+  z-index: 2;
+}
+
+.about__box {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.about__box::before {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e8631c;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Contact Area CSS */
+.contact-area {
+  background-color: var(--bg2);
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact--heading,
+.about--heading {
+  font-weight: 400;
+}
+.contact__form {
+  width: 50%;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+.contact__form--email {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-family: var(--font2);
+  border: none;
+  padding: 10px 20px;
+  outline: none;
+  z-index: -1;
+}
+.contact__form--email::placeholder {
+  color: #777;
+  font-family: var(--font2);
+}
+.contact__form--search {
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  font-size: 20px;
+  font-family: var(--font1);
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+  padding: 0 25px;
+  cursor: pointer;
+  background-color: var(--bg1);
+  color: var(--text-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Footer Area CSS */
+.footer-area {
+  background-color: var(--bg1);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__box {
+  width: 24%;
+}
+.footer__text--h4 {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: var(--font1);
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.footer__text--p {
+  color: var(--text-color);
+  font-size: 17px;
+  font-family: var(--font2);
+  margin-bottom: 15px;
+}
+
+.footer__icon i {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #000;
+  font-size: 25px;
+  background: #fff;
+  margin-right: 10px;
+  padding-left: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__icon i:hover {
+  color: #fff;
+  background-color: var(--bg2);
+}
+.footer__item {
+  color: var(--text-color);
+  font-size: 18px;
+  font-family: var(--font2);
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.footer__item:hover {
+  color: #e8631c;
+  padding-left: 15px;
+}

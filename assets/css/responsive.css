@@ -1,0 +1,241 @@
+/* Responsive CSS */
+
+/* applies to x-large devices (large desktops, less than 1400px) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1140px;
+  }
+  .banner {
+    width: 47%;
+  }
+  .dance__item {
+    width: 366px;
+  }
+  .price__item {
+    width: 366px;
+  }
+}
+
+/* applies to large devices (desktops, less than 1200px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+  .banner {
+    width: 55%;
+  }
+  .dance__item,
+  .price__item {
+    width: 306px;
+  }
+  .dance__content {
+    padding: 13px;
+  }
+  .dance__content--h3,
+  .price__content--h3,
+  .promo__text--h3,
+  .statistic__box--h3 {
+    font-size: 30px;
+  }
+  .dance__content--p,
+  .price__content--p,
+  .promo__text--p,
+  .statistic__box--p {
+    font-size: 18px;
+  }
+  .promo__text {
+    padding: 100px;
+  }
+  .footer__box {
+    width: 23%;
+  }
+  .footer__box--large {
+    width: 44%;
+  }
+  .footer__box--small {
+    width: 13%;
+  }
+}
+
+/* applies to medium devices (tablets, less than 992px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 740px;
+  }
+  .heading {
+    font-size: 45px;
+  }
+  .banner {
+    width: 80%;
+  }
+  .dance__item {
+    width: 236px;
+    margin-right: 15px;
+  }
+  .dance__content {
+    padding: 10px;
+  }
+  .dance__content--h3 {
+    font-size: 25px;
+
+    margin-bottom: 5px;
+  }
+  .dance__content--p {
+    font-size: 15px;
+  }
+  .price__item {
+    width: 236px;
+    margin-right: 15px;
+  }
+  .price__content--h3 {
+    font-size: 30px;
+  }
+  .price__content--p {
+    font-size: 18px;
+  }
+  .price__btn--black {
+    font-size: 18px;
+
+    padding: 10px 60px;
+    margin-top: 16px;
+  }
+  .promo__text {
+    padding: 36px;
+  }
+  .contact__form {
+    width: 80%;
+  }
+  .footer {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .footer__box {
+    width: 48%;
+  }
+}
+
+/* applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .heading {
+    font-size: 35px;
+  }
+  .sub-heading {
+    font-size: 18px;
+  }
+  .header__menu {
+    position: absolute;
+    top: 99%;
+    left: -100%;
+    width: 280px;
+    transition: all 0.3s;
+  }
+  .header__menu.active {
+    left: 0;
+  }
+  .header__menu--list {
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg1);
+    padding-top: 55px;
+  }
+  .header__menu--item {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  .header__menu--link {
+    padding: 5px 30px;
+  }
+  #menu-btn {
+    display: inline-block;
+  }
+  .banner-area {
+    margin-top: 60px;
+  }
+  .banner {
+    width: 100%;
+  }
+  .dance__item,
+  .price__item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .price__btn--black {
+    background: var(--bg1);
+    padding: 10px 60px;
+  }
+  .dance__item:last-child,
+  .price__item:last-child {
+    margin-bottom: 0;
+  }
+  .promo__box {
+    width: 100%;
+  }
+  .promo__box:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  .promo__text {
+    padding: 20px 30px;
+  }
+  .promo__btn--black {
+    margin-top: 20px;
+  }
+  .dance__content--h3,
+  .price__content--h3,
+  .promo__text--h3,
+  .statistic__box--h3 {
+    font-size: 30px;
+  }
+  .dance__content--p,
+  .price__content--p,
+  .promo__text--p,
+  .statistic__box--p {
+    font-size: 18px;
+  }
+  .statistic {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .statistic__box {
+    width: 100%;
+  }
+  .contact {
+    padding-bottom: 60px;
+  }
+  .contact__form {
+    width: 95%;
+  }
+  .contact__form--search {
+    width: 50%;
+    margin-top: 55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .footer {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .footer__box {
+    width: 100%;
+  }
+}
+
+/* applies to small devices (landscape phones, less than 768px) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+  .promo__text {
+    padding: 30px 90px;
+  }
+  .promo__btn--black {
+    margin-top: 0px;
+  }
+}
